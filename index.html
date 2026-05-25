@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coding Reference Desk</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Coding Reference Desk</p>
+        <h1>Core functions, patterns, and prompts for learning to code faster.</h1>
+        <p class="intro">
+          A practical reference for the most useful basics in Python, SQL, JavaScript, HTML/CSS,
+          and AI coding workflows in Codex or Claude Code.
+        </p>
+      </div>
+      <div class="hero-card">
+        <p class="card-label">What this is for</p>
+        <ul>
+          <li>Learn the functions you will actually use.</li>
+          <li>See short examples instead of long tutorials.</li>
+          <li>Keep one fast reference open while you build.</li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <section class="controls">
+        <label class="search">
+          <span>Search the reference</span>
+          <input id="searchInput" type="search" placeholder="Try: loops, arrays, join, prompts">
+        </label>
+        <div class="filters" id="filterBar" aria-label="Category filters"></div>
+      </section>
+
+      <section class="stats" id="statsBar"></section>
+
+      <section class="grid" id="cardGrid" aria-live="polite"></section>
+    </main>
+  </div>
+
+  <template id="cardTemplate">
+    <article class="reference-card">
+      <div class="card-top">
+        <span class="pill category-pill"></span>
+        <span class="difficulty"></span>
+      </div>
+      <h2></h2>
+      <p class="summary"></p>
+      <div class="meta-row">
+        <span class="tag purpose-tag"></span>
+        <span class="tag example-tag"></span>
+      </div>
+      <div class="detail-block">
+        <h3>Typical use case</h3>
+        <p class="use-case"></p>
+      </div>
+      <div class="detail-block">
+        <h3>Why it matters</h3>
+        <p class="importance"></p>
+      </div>
+      <pre><code></code></pre>
+      <p class="tip"></p>
+    </article>
+  </template>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
