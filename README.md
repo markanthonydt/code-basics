@@ -10,7 +10,12 @@ A static web app for learning practical basics in:
 
 ## Run
 
-Open [index.html](C:\Projects\code-basics\index.html) in a browser.
+Open `index.html` in a browser.
+
+## Android
+
+To use it on Android, host the project over `https` and open it in Chrome.
+Once loaded, use `Add to Home screen` or the in-app install prompt.
 
 ## What it includes
 
@@ -21,3 +26,4 @@ Open [index.html](C:\Projects\code-basics\index.html) in a browser.
 - Detailed explanations, use cases, and why-each-item-matters notes
 - Example snippets for every reference
 - Mobile-friendly card layout
+- PWA support for Android install and offline caching

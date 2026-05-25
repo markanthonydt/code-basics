@@ -118,6 +118,23 @@ h1 {
   line-height: 1.7;
 }
 
+.install-button {
+  margin-top: 1.2rem;
+  border: 0;
+  border-radius: 999px;
+  padding: 0.9rem 1.2rem;
+  background: var(--text);
+  color: #fffaf2;
+  font: inherit;
+  cursor: pointer;
+  transition: transform 140ms ease, opacity 140ms ease;
+}
+
+.install-button:hover,
+.install-button:focus-visible {
+  transform: translateY(-2px);
+}
+
 .controls {
   display: flex;
   flex-wrap: wrap;

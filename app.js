@@ -3,10 +3,12 @@ const cardGrid = document.getElementById("cardGrid");
 const statsBar = document.getElementById("statsBar");
 const searchInput = document.getElementById("searchInput");
 const cardTemplate = document.getElementById("cardTemplate");
+const installButton = document.getElementById("installButton");
 
 const categories = ["All", ...new Set(referenceItems.map(item => item.category))];
 let activeCategory = "All";
 let searchTerm = "";
+let deferredInstallPrompt = null;
 
 function buildFilters() {
   categories.forEach(category => {
@@ -114,6 +116,33 @@ searchInput.addEventListener("input", event => {
   searchTerm = event.target.value;
   render();
 });
+
+window.addEventListener("beforeinstallprompt", event => {
+  event.preventDefault();
+  deferredInstallPrompt = event;
+  installButton.hidden = false;
+});
+
+if (installButton) {
+  installButton.addEventListener("click", async () => {
+    if (!deferredInstallPrompt) {
+      return;
+    }
+
+    deferredInstallPrompt.prompt();
+    await deferredInstallPrompt.userChoice;
+    deferredInstallPrompt = null;
+    installButton.hidden = true;
+  });
+}
+
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("./sw.js").catch(() => {
+      // Keep the app usable even if offline support is unavailable.
+    });
+  });
+}
 
 buildFilters();
 render();

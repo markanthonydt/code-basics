@@ -1,0 +1,24 @@
+{
+  "name": "Coding Reference Desk",
+  "short_name": "Code Basics",
+  "description": "A mobile-friendly coding reference for Python, SQL, JavaScript, HTML/CSS, and Codex or Claude Code workflows.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f4efe4",
+  "theme_color": "#1d2433",
+  "icons": [
+    {
+      "src": "icons/icon-192.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-512.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
