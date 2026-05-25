@@ -10,7 +10,7 @@ A static web app for learning practical basics in:
 
 ## Run
 
-Open [index.html](C:\Projects\my-third-project\index.html) in a browser.
+Open [index.html](C:\Projects\code-basics\index.html) in a browser.
 
 ## What it includes
 
